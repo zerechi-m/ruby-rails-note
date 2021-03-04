@@ -10,3 +10,12 @@
 
   # sliceメソッド
   p str.slice(-2, 2)
+
+  # 文字列を配列に格納
+  p "abcdifg".chars # 一文字ずつ配列に格納
+
+  #正規表現 sub gsub
+   str = "abcdefg"
+   p str.sub(/[abcd]/, "2")  #[abcd]の中で最初にmatchしたものを引数2に置き換える
+
+   p str.gsub(/[aedg]/, "Z")  #[aedg]の全てのmatchしたものを引数2に置き換える
