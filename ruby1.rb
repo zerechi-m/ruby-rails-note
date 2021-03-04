@@ -252,31 +252,31 @@
 
 # 問18 配列内の偶数値のみを取り出す
 
-# def count_evens(array)
-#   i = 0
-#     array.each do |num|
-#       if num.even?
-#        i += 1
-#       end
-#     end
-#     p i
-# end
-
-
-# count_evens([2, 1, 2, 3, 4])
-# count_evens([2, 2, 0])
-# count_evens([1, 3, 5])
-
-# 問19 配列からの値の取り出し include? メソッド
-
-def array123(array)
-  if array.include?(1) && array.include?(2) && array.include?(3)
-    p true
-  else
-    p false
-  end
+def count_evens(array)
+  i = 0
+    array.each do |num|
+      if num.even?
+       i += 1
+      end
+    end
+    p i
 end
 
-array123([1, 1, 2, 3, 1])
-array123([1, 1, 2, 4, 1])
-array123([1, 1, 2, 1, 2, 3])
+
+count_evens([2, 1, 2, 3, 4])
+count_evens([2, 2, 0])
+count_evens([1, 3, 5])
+
+# 問19 配列からの値の取り出し include? メソッド 配列の中に引数の値が含まれているか？
+
+# def array123(array)
+#   if array.include?(1) && array.include?(2) && array.include?(3)
+#     p true
+#   else
+#     p false
+#   end
+# end
+
+# array123([1, 1, 2, 3, 1])
+# array123([1, 1, 2, 4, 1])
+# array123([1, 1, 2, 1, 2, 3])
