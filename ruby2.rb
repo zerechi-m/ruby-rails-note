@@ -1,28 +1,33 @@
-# 配列の数値の合計値を出力
-   array = [1,2,3,4,5,6,7]
+# # 配列の数値の合計値を出力
+#    array = [1,2,3,4,5,6,7]
 
-   puts array.sum  # 配列.sumで配列内の数値を全部合計
+#    puts array.sum  # 配列.sumで配列内の数値を全部合計
 
-# 文字列の抽出
-  # 文字列のみ
-    str = "Hello"
-    p str[-2, 2]  # -1は最後から算出
+# # 配列同士の重複した値を取り出す
+   array1 = [ 1, 3, 55, 66, 12]
+   array2 = [ 2, 4, 6, 3, 12]
+   p array1 & array2
 
-  # sliceメソッド
-  p str.slice(-2, 2)
+# # 文字列の抽出
+#   # 文字列のみ
+#     str = "Hello"
+#     p str[-2, 2]  # -1は最後から算出
 
-  # 文字列を配列に格納
-  p "abcdifg".chars # 一文字ずつ配列に格納
+#   # sliceメソッド !をつけると破壊メソッド
+#   p str.slice(-2, 2)
 
-  #正規表現 sub gsub
-   str = "abcdefg"
-   p str.sub(/[abcd]/, "2")  #[abcd]の中で最初にmatchしたものを引数2に置き換える
+#   # 文字列を配列に格納
+#   p "abcdifg".chars # 一文字ずつ配列に格納
 
-   p str.gsub(/[aedg]/, "Z")  #[aedg]の全てのmatchしたものを引数2に置き換える
+# #正規表現 sub gsub
+#    str = "abcdefg"
+#    p str.sub(/[abcd]/, "2")  #[abcd]の中で最初にmatchしたものを引数2に置き換える
 
-   #正規表現 match?
-   str = "HELLO"
-   p str.match(/H/)   # 一番最初にマッチした文字列を<MatchData>で取得
+#    p str.gsub(/[aedg]/, "Z")  #[aedg]の全てのmatchしたものを引数2に置き換える
 
-   p str.match?(/\A*[lo]+\z/i) # 該当する文字列があればtrue,なければfalse
-                           # iで小文字と大文字どちらでも該当
+#    #正規表現 match?
+#    str = "HELLO"
+#    p str.match(/H/)   # 一番最初にマッチした文字列を<MatchData>で取得
+
+#    p str.match?(/\A*[lo]+\z/i) # 該当する文字列があればtrue,なければfalse
+#                            # iで小文字と大文字どちらでも該当
