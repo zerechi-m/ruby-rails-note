@@ -19,3 +19,10 @@
    p str.sub(/[abcd]/, "2")  #[abcd]の中で最初にmatchしたものを引数2に置き換える
 
    p str.gsub(/[aedg]/, "Z")  #[aedg]の全てのmatchしたものを引数2に置き換える
+
+   #正規表現 match?
+   str = "HELLO"
+   p str.match(/H/)   # 一番最初にマッチした文字列を<MatchData>で取得
+
+   p str.match?(/\A*[lo]+\z/i) # 該当する文字列があればtrue,なければfalse
+                           # iで小文字と大文字どちらでも該当
