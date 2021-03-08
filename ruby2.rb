@@ -21,7 +21,7 @@
 #   p str.slice(-2, 2)
 
 #   # 文字列を配列に格納
-#   p "abcdifg".chars # 一文字ずつ配列に格納
+  p "abcdifg".chars # 一文字ずつ配列に格納
 
     # 文字列を数字に変換して配列に格納
    #  p "123456789".chars.map( &:to_i)

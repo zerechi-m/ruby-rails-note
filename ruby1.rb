@@ -283,19 +283,30 @@
 
 
 # 問20 休みか否か
-require "Date"
+# require "Date"
 
-def sleep_in(weekday, vacation)
-  if weekday.match?(/[Sun][Satur]/) || vacation == true
-    puts "休みの日なのでゆっくりおやすみくださいzzZ"
-  else
-    puts "旦那、仕事でっせ！早くおきんしゃい！！"
-  end
+# def sleep_in(weekday, vacation)
+#   if weekday.match?(/[Sun][Satur]/) || vacation == true
+#     puts "休みの日なのでゆっくりおやすみくださいzzZ"
+#   else
+#     puts "旦那、仕事でっせ！早くおきんしゃい！！"
+#   end
+# end
+
+
+# weekday = Date.today.strftime("%A")
+
+# vacation = false
+# sleep_in(weekday, vacation) 
+
+# 問21 二桁の整数の分解して計算
+
+def calculation(input) 
+  array = input.chars.map(&:to_i)
+  sum = array.sum
+  mul = array.inject(:*)
+  p sum + mul
 end
 
-
-weekday = Date.today.strftime("%A")
-
-vacation = false
-sleep_in(weekday, vacation) 
-
+input = gets.chomp
+calculation(input)
