@@ -301,12 +301,24 @@
 
 # 問21 二桁の整数の分解して計算
 
-def calculation(input) 
-  array = input.chars.map(&:to_i)
-  sum = array.sum
-  mul = array.inject(:*)
-  p sum + mul
+# def calculation(input) 
+#   array = input.chars.map(&:to_i)
+#   sum = array.sum
+#   mul = array.inject(:*)
+#   p sum + mul
+# end
+
+# input = gets.chomp
+# calculation(input)
+
+# 問22 joinメソッドで配列内の文字列を結合
+
+def extra_end(str)
+  array = []
+  st = str.slice(-2, 2)
+  p st * 3
 end
 
-input = gets.chomp
-calculation(input)
+extra_end('Hello')
+extra_end('ab')
+extra_end('Hi')
