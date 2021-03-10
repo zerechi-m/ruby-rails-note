@@ -313,12 +313,28 @@
 
 # 問22 joinメソッドで配列内の文字列を結合
 
-def extra_end(str)
-  array = []
-  st = str.slice(-2, 2)
-  p st * 3
+# def extra_end(str)
+#   array = []
+#   st = str.slice(-2, 2)
+#   p st * 3
+# end
+
+# extra_end('Hello')
+# extra_end('ab')
+# extra_end('Hi')
+
+# 問23 if,else問題
+
+def num(num1, num2, num3)
+  num_sum = num1 + num2
+  if num3 <= 3
+    puts num_sum / num3
+  elsif num3 >= 4
+    puts num_sum * num3
+  end
+
 end
 
-extra_end('Hello')
-extra_end('ab')
-extra_end('Hi')
+num(1, 5, 3)
+num(1, 5, 5)
+num(1, 9, -2)
