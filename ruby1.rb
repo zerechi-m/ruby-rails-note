@@ -325,16 +325,36 @@
 
 # 問23 if,else問題
 
-def num(num1, num2, num3)
-  num_sum = num1 + num2
-  if num3 <= 3
-    puts num_sum / num3
-  elsif num3 >= 4
-    puts num_sum * num3
+# def num(num1, num2, num3)
+#   num_sum = num1 + num2
+#   if num3 <= 3
+#     puts num_sum / num3
+#   elsif num3 >= 4
+#     puts num_sum * num3
+#   end
+
+# end
+
+# num(1, 5, 3)
+# num(1, 5, 5)
+# num(1, 9, -2)
+
+# 問24 小数点の切り捨てと条件分岐
+
+def calculate_points(amount, is_birthday)
+  if amount >= 1000
+    point = (amount * 0.05).floor
+  else amount < 1000
+    point = (amount * 0.03).floor
   end
 
+  if is_birthday == true
+    puts "ポイントは#{(point * 5).floor}点です"
+  else
+    puts "ポイントは#{point}点です"
+  end
 end
 
-num(1, 5, 3)
-num(1, 5, 5)
-num(1, 9, -2)
+calculate_points(500, false)
+calculate_points(2000, false)
+calculate_points(3000, true)
