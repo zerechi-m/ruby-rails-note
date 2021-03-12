@@ -339,22 +339,44 @@
 # num(1, 5, 5)
 # num(1, 9, -2)
 
-# 問24 小数点の切り捨てと条件分岐
+# # 問24 小数点の切り捨てと条件分岐
 
-def calculate_points(amount, is_birthday)
-  if amount >= 1000
-    point = (amount * 0.05).floor
-  else amount < 1000
-    point = (amount * 0.03).floor
-  end
+# def calculate_points(amount, is_birthday)
+#   if amount >= 1000
+#     point = (amount * 0.05).floor
+#   else amount < 1000
+#     point = (amount * 0.03).floor
+#   end
 
-  if is_birthday == true
-    puts "ポイントは#{(point * 5).floor}点です"
-  else
-    puts "ポイントは#{point}点です"
+#   if is_birthday == true
+#     puts "ポイントは#{(point * 5).floor}点です"
+#   else
+#     puts "ポイントは#{point}点です"
+#   end
+# end
+
+# calculate_points(500, false)
+# calculate_points(2000, false)
+# calculate_points(3000, true)
+
+# 問25 while文を用いたFizzBuzz問題
+
+def fizz_buzz(num)
+  while num <= 100 do
+    if num % 15 == 0
+      puts "FizzBuzz"
+    elsif num % 5 == 0
+      puts "Buzz"
+    elsif num % 3 == 0
+      puts "Fizz"
+    else
+      puts num
+    end
+
+    num += 1
   end
 end
 
-calculate_points(500, false)
-calculate_points(2000, false)
-calculate_points(3000, true)
+num = 1
+fizz_buzz(num)
+
