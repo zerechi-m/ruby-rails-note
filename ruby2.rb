@@ -3,6 +3,10 @@
 
 #    puts array.sum  # 配列.sumで配列内の数値を全部合計
 
+# # 配列に中身があるかのメソッド
+     array = []
+     p array.any? #中身があればtrue ,なければfalse
+     
 # # 配列内の文字列を結合
      array = ["H","E","L","L","O"]
      puts array.join
