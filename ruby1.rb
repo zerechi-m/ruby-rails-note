@@ -361,22 +361,35 @@
 
 # 問25 while文を用いたFizzBuzz問題
 
-def fizz_buzz(num)
-  while num <= 100 do
-    if num % 15 == 0
-      puts "FizzBuzz"
-    elsif num % 5 == 0
-      puts "Buzz"
-    elsif num % 3 == 0
-      puts "Fizz"
-    else
-      puts num
-    end
+# def fizz_buzz(num)
+#   while num <= 100 do
+#     if num % 15 == 0
+#       puts "FizzBuzz"
+#     elsif num % 5 == 0
+#       puts "Buzz"
+#     elsif num % 3 == 0
+#       puts "Fizz"
+#     else
+#       puts num
+#     end
 
-    num += 1
+#     num += 1
+#   end
+# end
+
+# num = 1
+# fizz_buzz(num)
+
+# 問26 downcaseメソッドを用いた文字列の照合
+
+def end_other(str1, str2)
+  if str1.slice(-3, 3).downcase == str2.slice(-3, 3).downcase
+    puts "True"
+  else
+    puts "False"
   end
 end
 
-num = 1
-fizz_buzz(num)
-
+end_other('Hiabc', 'abc')
+end_other('AbC', 'HiaBc')
+end_other('abc', 'abXabc')
