@@ -1,3 +1,5 @@
+
+
 # # 配列の数値の合計値を出力
 #    array = [1,2,3,4,5,6,7]
 
@@ -51,11 +53,18 @@
 
 
 # #[N]桁の小数点四捨五入
-   float = 12.234
-   p float.round(2)  # 小数点第3位の四捨五入 (N.01234...)の添字
-   p float.round(-1) # 整数部の四捨五入
+#    float = 12.234
+#    p float.round(2)  # 小数点第3位の四捨五入 (N.01234...)の添字
+#    p float.round(-1) # 整数部の四捨五入
 
-# #[N]桁の小数を切り捨て
-   float = 12.234
-   p float.floor
-   p float.floor(1)
+# # #[N]桁の小数を切り捨て
+#    float = 12.234
+#    p float.floor
+#    p float.floor(1)
+
+# 日時の表示 strftime
+require "date"
+require "time"
+time = Time.new
+
+p time.strftime(" %Y年 %m月 %d日 %H時 %M分 %S秒 ") # strftime("%~で手軽に表示ができる
