@@ -382,14 +382,29 @@
 
 # 問26 downcaseメソッドを用いた文字列の照合
 
-def end_other(str1, str2)
-  if str1.slice(-3, 3).downcase == str2.slice(-3, 3).downcase
+# def end_other(str1, str2)
+#   if str1.slice(-3, 3).downcase == str2.slice(-3, 3).downcase
+#     puts "True"
+#   else
+#     puts "False"
+#   end
+# end
+
+# end_other('Hiabc', 'abc')
+# end_other('AbC', 'HiaBc')
+# end_other('abc', 'abXabc')
+
+# 問27 整数のif/else問題
+
+def near_ten(num)
+  quotient = num % 10
+  if quotient <= 2 || quotient >= 8
     puts "True"
   else
     puts "False"
   end
 end
 
-end_other('Hiabc', 'abc')
-end_other('AbC', 'HiaBc')
-end_other('abc', 'abXabc')
+near_ten(12)
+near_ten(17)
+near_ten(19)
