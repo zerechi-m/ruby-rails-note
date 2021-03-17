@@ -396,15 +396,34 @@
 
 # 問27 整数のif/else問題
 
-def near_ten(num)
-  quotient = num % 10
-  if quotient <= 2 || quotient >= 8
-    puts "True"
+# def near_ten(num)
+#   quotient = num % 10
+#   if quotient <= 2 || quotient >= 8
+#     puts "True"
+#   else
+#     puts "False"
+#   end
+# end
+
+# near_ten(12)
+# near_ten(17)
+# near_ten(19)
+
+# 問28 預金システムのアルゴリズム
+
+def withdraw(balance, amount)
+  fee = 110
+
+  if balance >= amount + fee
+    balance = balance - (amount + fee)
+    puts "引き落とし額#{amount + fee}円です！ 残高は#{balance}円です"
   else
-    puts "False"
+    puts "残高不足です"
   end
 end
 
-near_ten(12)
-near_ten(17)
-near_ten(19)
+balance = 100000
+puts "残高#{balance}円ですいくら引き落としますか？"
+amount = gets.to_i
+
+withdraw(balance, amount)
