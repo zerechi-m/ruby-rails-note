@@ -411,19 +411,38 @@
 
 # 問28 預金システムのアルゴリズム
 
-def withdraw(balance, amount)
-  fee = 110
+# def withdraw(balance, amount)
+#   fee = 110
 
-  if balance >= amount + fee
-    balance = balance - (amount + fee)
-    puts "引き落とし額#{amount + fee}円です！ 残高は#{balance}円です"
-  else
-    puts "残高不足です"
+#   if balance >= amount + fee
+#     balance = balance - (amount + fee)
+#     puts "引き落とし額#{amount + fee}円です！ 残高は#{balance}円です"
+#   else
+#     puts "残高不足です"
+#   end
+# end
+
+# balance = 100000
+# puts "残高#{balance}円ですいくら引き落としますか？"
+# amount = gets.to_i
+
+# withdraw(balance, amount)
+
+# 問29 API問題 重複する値を除外する
+
+def lone_sum(array)
+  ary = []
+  array.each do |num|
+    i = 0
+    unless num == ary[i]
+      ary << num
+    end
+    i += 1
   end
+
+  puts ary.sum
 end
 
-balance = 100000
-puts "残高#{balance}円ですいくら引き落としますか？"
-amount = gets.to_i
-
-withdraw(balance, amount)
+lone_sum([1, 2, 3])
+lone_sum([3, 2, 3])
+lone_sum([3, 3, 3])
