@@ -449,32 +449,47 @@
 
 # 問30 配列の検索について バイナリーサーチ
 
-def binary_search(array, number_of_elements, target)
-  left = 0
-  right = number_of_elements - 1
-  while left <= right
-    center = (left + right) / 2
-    if array[center] == target
-      return center
-    elsif array[center] < target
-      left = center + 1
-    else
-      right = center - 1
-    end
+# def binary_search(array, number_of_elements, target)
+#   left = 0
+#   right = number_of_elements - 1
+#   while left <= right
+#     center = (left + right) / 2
+#     if array[center] == target
+#       return center
+#     elsif array[center] < target
+#       left = center + 1
+#     else
+#       right = center - 1
+#     end
+#   end
+#   return -1 
+# end
+
+# array=[1,3,5,6,9,10,13,20,26,31]
+
+# puts "検索したい数字を入力してください"
+# target = gets.to_i
+# number_of_elements = array.length
+
+# result = binary_search(array, number_of_elements, target)
+
+# if result == -1
+#   puts "#{target}は配列内に存在しません"
+# else
+#   puts "#{target}は配列の#{result}番目に存在します "
+# end
+
+# 問31 条件演算子
+
+def near_ten(num)
+  all_sum =  num.to_s.chars.map{|n| n.to_i}.sum
+  other = 10 - all_sum
+  if other <= 5 
+    puts "10の倍数との差は#{other}です"
+  else
+    puts "10の倍数との差は#{all_sum}です"
   end
-  return -1 
 end
-
-array=[1,3,5,6,9,10,13,20,26,31]
-
-puts "検索したい数字を入力してください"
-target = gets.to_i
-number_of_elements = array.length
-
-result = binary_search(array, number_of_elements, target)
-
-if result == -1
-  puts "#{target}は配列内に存在しません"
-else
-  puts "#{target}は配列の#{result}番目に存在します "
-end
+near_ten(117)
+near_ten(123)
+near_ten(111)
