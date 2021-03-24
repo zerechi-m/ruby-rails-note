@@ -493,3 +493,19 @@ end
 near_ten(117)
 near_ten(123)
 near_ten(111)
+
+#問32 該当の文字があるか include?
+
+def xyz_there(str)
+  if str.include?(".xyz")
+    puts false
+  elsif str.include?("xyz")
+    puts true
+  else
+    puts false
+  end
+end
+
+xyz_there('abcxyz')
+xyz_there('abc.xyz')
+xyz_there('azbycx')
