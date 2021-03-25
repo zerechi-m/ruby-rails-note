@@ -481,31 +481,55 @@
 
 # 問31 条件演算子
 
-def near_ten(num)
-  all_sum =  num.to_s.chars.map{|n| n.to_i}.sum
-  other = 10 - all_sum
-  if other <= 5 
-    puts "10の倍数との差は#{other}です"
-  else
-    puts "10の倍数との差は#{all_sum}です"
-  end
-end
-near_ten(117)
-near_ten(123)
-near_ten(111)
+# def near_ten(num)
+#   all_sum =  num.to_s.chars.map{|n| n.to_i}.sum
+#   other = 10 - all_sum
+#   if other <= 5 
+#     puts "10の倍数との差は#{other}です"
+#   else
+#     puts "10の倍数との差は#{all_sum}です"
+#   end
+# end
+# near_ten(117)
+# near_ten(123)
+# near_ten(111)
 
 #問32 該当の文字があるか include?
 
-def xyz_there(str)
-  if str.include?(".xyz")
-    puts false
-  elsif str.include?("xyz")
-    puts true
+# def xyz_there(str)
+#   if str.include?(".xyz")
+#     puts false
+#   elsif str.include?("xyz")
+#     puts true
+#   else
+#     puts false
+#   end
+# end
+
+# xyz_there('abcxyz')
+# xyz_there('abc.xyz')
+# xyz_there('azbycx')
+
+#問33 閏年を求める
+def get_days(year, month)
+  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  if month == 2
+    if year % 400 == 0
+      return month_days[month - 1] + 1
+    elsif year % 100 == 0
+      return month_days[month - 1]
+    elsif year % 4 == 0
+      return month_days[month - 1] + 1
+    end
   else
-    puts false
+    return month_days[month - 1]
   end
 end
 
-xyz_there('abcxyz')
-xyz_there('abc.xyz')
-xyz_there('azbycx')
+puts "年を入力してください："
+year = gets.to_i
+puts "月を入力してください："
+month = gets.to_i
+
+days = get_days(year, month)
+puts "#{year}年#{month}月は#{days}日間あります"
