@@ -511,25 +511,42 @@
 # xyz_there('azbycx')
 
 #問33 閏年を求める
-def get_days(year, month)
-  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  if month == 2
-    if year % 400 == 0
-      return month_days[month - 1] + 1
-    elsif year % 100 == 0
-      return month_days[month - 1]
-    elsif year % 4 == 0
-      return month_days[month - 1] + 1
-    end
+# def get_days(year, month)
+#   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#   if month == 2
+#     if year % 400 == 0
+#       return month_days[month - 1] + 1
+#     elsif year % 100 == 0
+#       return month_days[month - 1]
+#     elsif year % 4 == 0
+#       return month_days[month - 1] + 1
+#     end
+#   else
+#     return month_days[month - 1]
+#   end
+# end
+
+# puts "年を入力してください："
+# year = gets.to_i
+# puts "月を入力してください："
+# month = gets.to_i
+
+# days = get_days(year, month)
+# puts "#{year}年#{month}月は#{days}日間あります"
+
+#問34 絶対値に変換absメソッド
+
+def close_far(num1, num2, num3)
+  a = (num1 - num2).abs
+  b = (num2 - num3).abs
+  c = (num1 - num3).abs
+  if  b >= 2 && a == 1 || c ==1 
+    puts true
   else
-    return month_days[month - 1]
+    puts false
   end
 end
 
-puts "年を入力してください："
-year = gets.to_i
-puts "月を入力してください："
-month = gets.to_i
-
-days = get_days(year, month)
-puts "#{year}年#{month}月は#{days}日間あります"
+close_far(1, 2, 10)
+close_far(1, 2, 3)
+close_far(4, 1, 3)
