@@ -536,17 +536,76 @@
 
 #問34 絶対値に変換absメソッド
 
-def close_far(num1, num2, num3)
-  a = (num1 - num2).abs
-  b = (num2 - num3).abs
-  c = (num1 - num3).abs
-  if  b >= 2 && a == 1 || c ==1 
-    puts true
-  else
-    puts false
-  end
+# def close_far(num1, num2, num3)
+#   a = (num1 - num2).abs
+#   b = (num2 - num3).abs
+#   c = (num1 - num3).abs
+#   if  b >= 2 && a == 1 || c ==1 
+#     puts true
+#   else
+#     puts false
+#   end
+# end
+
+# close_far(1, 2, 10)
+# close_far(1, 2, 3)
+# close_far(4, 1, 3)
+
+# 問35 成績管理アプリケーションの作成
+
+def registration_student(students)
+  # 生徒の名前と年齢を登録できるようにする
+  student = {}
+  puts '生徒名を入力してください'
+  student.store(:name, gets.chomp) 
+
+  puts '生徒の年齢を入力してください'
+  student.store(:age, gets.to_i) 
+  # 登録した生徒の国語、数学、英語の点数を登録できるようにする
+  puts "国語の得点は？"
+  student.store(:kokugo, gets.to_i) 
+  puts "数学の得点は？"
+  student.store(:math, gets.to_i) 
+  puts "英語の得点は？"
+  student.store(:english, gets.to_i) 
+  
+  return students << student
 end
 
-close_far(1, 2, 10)
-close_far(1, 2, 3)
-close_far(4, 1, 3)
+def show_student_name(students)
+  p students
+  i = 0
+  students.each do | student |
+    puts "#{student[:name]}---[#{i}]"
+    i += 1
+  end
+  # 登録された生徒の名前を番号を振って表示する
+  puts '見たい生徒の番号を入力してください'
+  i = gets.to_i
+  student = students[i]
+  # 選択された生徒の名前、年齢、国語、数学、英語の点数を表示できるようにする
+  puts "名前:#{student[:name]} "
+  puts "年齢:#{student[:age]} "
+  puts "国語:#{student[:kokugo]}"
+  puts "数学:#{student[:math]} "
+  puts "英語:#{student[:english]} "
+end
+
+students = []
+
+while true
+  puts '行いたい項目を選択してください'
+  puts '[1]点数を登録する'
+  puts '[2]点数を確認する'
+  puts '[3]終了する'
+  input = gets.to_i
+  if input == 1
+    students = registration_student(students)
+  elsif input == 2
+    show_student_name(students)
+  elsif input == 3
+    exit
+  else
+    puts '無効な値です'
+  end
+end

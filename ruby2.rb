@@ -3,6 +3,11 @@
 # p hash.keys       #キー名の取得
 # p hash.values     #バリューの取得
 
+## ハッシュに値の追加
+ hash = {}
+ hash.store(:name , "abc") #第一引数[:key],第二引数に値
+ p hash[:name]  #値の取出しはシンボル型の記入であれば[:key]、文字列であれば "key"
+
 # # 配列の数値の合計値を出力
 #    array = [1,2,3,4,5,6,7]
 
