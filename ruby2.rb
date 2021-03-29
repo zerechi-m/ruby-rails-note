@@ -5,8 +5,10 @@
 
 ## ハッシュに値の追加
  hash = {}
- hash.store(:name , "abc") #第一引数[:key],第二引数に値
- p hash[:name]  #値の取出しはシンボル型の記入であれば[:key]、文字列であれば "key"
+ hash[:age] = 33
+ hash.store("name" , "abc") #第一引数[:key],第二引数に値
+    p hash[:age] #値の取出しはシンボル型の記入であれば[:key]、
+    p hash["name"]  #文字列であれば "key"
 
 # # 配列の数値の合計値を出力
 #    array = [1,2,3,4,5,6,7]
@@ -80,3 +82,9 @@ require "time"
 time = Time.new
 
 p time.strftime(" %Y年 %m月 %d日 %H時 %M分 %S秒 ") # strftime("%~で手軽に表示ができる
+
+# 小数点の表示
+
+num = 15.to_f + 10  # .to_f で小数点表示
+
+p sprintf("%.3f",num)    # sprintf("%.3f", num) で小数点第三位までを表示
