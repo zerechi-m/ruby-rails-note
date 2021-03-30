@@ -88,3 +88,9 @@ p time.strftime(" %Y年 %m月 %d日 %H時 %M分 %S秒 ") # strftime("%~で手軽
 num = 15.to_f + 10  # .to_f で小数点表示
 
 p sprintf("%.3f",num)    # sprintf("%.3f", num) で小数点第三位までを表示
+
+# splitメソッド
+
+puts "-----標準入力 splitメソッドの使用方法"
+num = gets 
+p num.split # 標準入力時の 空白・改行を削除して配列に格納
