@@ -25,7 +25,8 @@
      
 # # 配列内の文字列を結合
      array = ["H","E","L","L","O"]
-     puts array.join
+     puts array.join       #各配列の文字列をそのまま連結
+     puts array.join(" ")  #各配列の文字列に空白で区切りを行う
 
 
 # #配列内の数字を計算
