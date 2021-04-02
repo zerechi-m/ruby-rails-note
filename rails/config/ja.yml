@@ -1,0 +1,14 @@
+# ja.ymlにてエラーメッセージの日本語化対応
+
+ja:
+  activerecord:     #アクティブレコード == テーブル
+    attributes:
+      member:                #<---- モデル名を指定 日本語訳は下のmodelsに記載
+        name: 選手名          #<---- モデルに紐づくカラムの日本語訳を記載
+        uni_no: 背番号
+        position: ポジション
+        dominant_hand: 利投/利打
+      models:
+        team: チーム    #<----モデル名の日本語訳
+        member: 選手    #<----モデル名の日本語訳
+   
